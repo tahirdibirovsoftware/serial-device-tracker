@@ -1,10 +1,11 @@
 import { exec } from 'child_process';
 import { platform } from 'os';
+import { join } from 'path';
 import { parseLinuxOutput, parseWindowsOutput, DeviceInfo } from './parsers';
 
 const scriptPaths: { [key: string]: string } = {
-    linux: 'scripts/list_usb_serial_devices.sh',
-    win32: 'scripts/list_usb_serial_devices.ps1'
+    linux: join(__dirname, '../scripts/list_usb_serial_devices.sh'),
+    win32: join(__dirname, '../scripts/list_usb_serial_devices.ps1')
 };
 
 export function listDevices(): Promise<DeviceInfo[]> {
