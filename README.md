@@ -37,27 +37,6 @@ function handleDeviceChange(addedDevices: DeviceInfo[], removedDevices: DeviceIn
 monitorDevices(handleDeviceChange);
 ```
 
-## Project Structure
-
-```
-serial-device-tracker/
-│
-├── src/
-│   ├── index.ts
-│   ├── listDevices.ts
-│   ├── parsers.ts
-│   ├── watcher.ts
-│
-├── scripts/
-│   ├── list_usb_serial_devices.sh
-│   ├── list_usb_serial_devices.ps1
-│
-├── package.json
-├── tsconfig.json
-├── README.md
-```
-
 ## License
 
 MIT
-# serial-device-tracker
